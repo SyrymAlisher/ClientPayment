@@ -11,19 +11,19 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(indexName="test-payment")
+@Document(indexName = "client-payment")
 public class PaymentEntity {
 
     @Id
-    @Field(type =FieldType.Keyword)
+    @Field(type = FieldType.Keyword)
     private String paymentId;
 
-    @Field(type=FieldType.Keyword)
+    @Field(type = FieldType.Keyword)
     private String clientId;
 
-    @Field(type=FieldType.Text)
-    private String  receiptName;
+    @Field(type = FieldType.Text)
+    private String receiptName;
 
-    @Field(type=FieldType.Double)
-    private Double cost;
+    @Field(type = FieldType.Double)
+    private double cost;
 }

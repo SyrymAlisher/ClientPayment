@@ -5,17 +5,16 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
 @Repository
-public interface PaymentRespotitory extends ElasticsearchRepository<PaymentEntity, String> {
+public interface PaymentRepository extends ElasticsearchRepository<PaymentEntity, String> {
 
-    Page<PaymentEntity> getPaymentEntitiesByType(String type, Pageable pageable);
-
-    PaymentEntity getPaymentEntityByPaymentId(String taskId);
+    Page<PaymentEntity> getPaymentEntitiesBy(Pageable pageable);
+    PaymentEntity getPaymentEntityByPaymentId(String paymentId);
 
     Page<PaymentEntity> getPaymentEntitiesByClientId(String clientId, Pageable pageable);
-
+    List<PaymentEntity> getPaymentEntitiesByClientId(String clientId);
     PaymentEntity deletePaymentEntityByPaymentId(String paymentId);
 
 

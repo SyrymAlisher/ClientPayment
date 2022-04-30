@@ -13,9 +13,9 @@ public class ElasticConfig extends AbstractElasticsearchConfiguration {
     @Override
     public RestHighLevelClient elasticsearchClient() {
         ClientConfiguration clientConfiguration = ClientConfiguration.builder()
-                .connectedTo("https://mydeployment-5a87d1.es.us-central1.gcp.cloud.es.io:9243")
+                .connectedTo("clientpayment.es.us-central1.gcp.cloud.es.io:9243")
                 .usingSsl()
-                .withBasicAuth("elastic", "S6QNJO01tmD3Gek2Y2gVsV51")
+                .withBasicAuth("elastic", "7ZuY07ay22WGGfKm6P7gwjJh")
                 .build();
 
         return RestClients.create(clientConfiguration).rest();

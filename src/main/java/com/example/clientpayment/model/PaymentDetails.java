@@ -7,10 +7,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class PaymentRequest {
-
+public class PaymentDetails {
     private String paymentId;
-    private String clientId;
+    private ClientResponse clientId;
     private String  receiptName;
     private double cost;
 }

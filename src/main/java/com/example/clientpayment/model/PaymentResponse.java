@@ -12,5 +12,5 @@ public class PaymentResponse {
     private String paymentId;
     private String clientId;
     private String  receiptName;
-    private int cost;
+    private double cost;
 }
