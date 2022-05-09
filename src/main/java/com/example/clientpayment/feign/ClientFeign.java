@@ -17,4 +17,7 @@ public interface ClientFeign{
     @GetMapping("/client")
     ClientResponse getClientById(@RequestParam String clientId);
 
+    @GetMapping("/client/all")
+    List<ClientResponse> getAllClient();
+
 }
